@@ -14,22 +14,8 @@ SENAC.geometry('600x600')
 #SENAC.maxsize(width=400, height=200)
 #SENAC.minsize(width=1920, height=1080)
 #--------------------------------------------------------------------
-#--------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
 Nome.pack()
 Caxinha.pack(),
 Botao.pack()
 Botao2.pack()
-
-
 SENAC.mainloop()
-
