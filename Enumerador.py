@@ -1,12 +1,16 @@
 from itertools import count
 from tkinter import *
+from turtle import position
 #_______________________________________________________________________________________________
 nume=1
 def Less():
-    Janelinha['text'] = int(Janelinha['text']) - nume
+    Janelinha['text'] = (Janelinha['text']) - nume
 
 def Plus():
-    Janelinha['text'] = int(Janelinha['text']) + nume
+    Janelinha['text'] = (Janelinha['text']) + nume
+
+def Reset():
+    Janelinha['text'] = (Janelinha['text']) = 0
 #_______________________________________________________________________________________________
 Regulador = Tk()
 Regulador.geometry('500x200')
@@ -24,13 +28,19 @@ Regulador.config(bg='black')
 
 FONT ='Calibri 40 bold'
 
-Janelinha= Label(Regulador, text='0', font=FONT, foreground='#5AF90A', background='#000000')
+Janelinha= Label(Regulador, text=0, font=FONT, foreground='#5AF90A', background='#000000')
 Nu_= Button(Regulador, text='+', font=FONT, foreground='#5AF90A', background='#000000', command=Plus)
 Nu2= Button(Regulador, text='_', font=FONT, foreground='#5AF90A', background='#000000', command=Less)
-
-
+Nu3= Button(Regulador, text='Return', font=FONT, foreground='#5AF90A', background='#000000', command=Reset)
 
 Janelinha.grid(row=0, column=1, sticky= NSEW)
-Nu2.grid(row=0, column=0, sticky= NSEW)
+
+
 Nu_.grid(row=0, column=2, sticky= NSEW)
+Nu2.grid(row=0, column=0, sticky= NSEW)
+Nu3.grid(row=1, column=1, sticky= NSEW) 
+
+
+Nu_.bind('+', lambda event: Plus())
+Nu2.bind('_', lambda event: Less())
 Regulador.mainloop()
