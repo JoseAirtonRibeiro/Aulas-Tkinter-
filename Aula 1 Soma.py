@@ -7,7 +7,11 @@ def Soma():
         Janela['text'] = float(en1.get()) + float(en2.get())
     else:
         Janela['text'] = 'Valor Invalido'
-
+def SubTr():
+    if en1.get().isnumeric() and en2.get().isnumeric():
+        Janela['text'] = float(en1.get()) - float(en2.get())
+    else:
+        Janela['text'] = 'Valor Invalido'
 #--------------------------------------------------------------------
 #Front-End
 Caixa = Tk()
@@ -17,7 +21,7 @@ en1  = Entry(Caixa, font=Font)
 en2 = Entry(Caixa, font=Font)
 Soma = Button(Caixa, text='Soma', font=Font, bg='Green',command=Soma)
 Caixa.geometry('300x150')
-Caixa.config (bg='Black')
+
 #--------------------------------------------------------------------
 
 
