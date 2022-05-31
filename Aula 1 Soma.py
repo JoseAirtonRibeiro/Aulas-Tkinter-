@@ -1,7 +1,6 @@
 from tkinter import *
 
-
-
+#--------------------------------------------------------------------
 #Back-end   
 def Soma():
     if en1.get().isnumeric() and en2.get().isnumeric():
@@ -9,11 +8,10 @@ def Soma():
     else:
         Janela['text'] = 'Valor Invalido'
 
-
-Caixa = Tk()
-Font = 'Arial 12 bold'
 #--------------------------------------------------------------------
 #Front-End
+Caixa = Tk()
+Font = 'Arial 12 bold'
 Janela   = Label(Caixa, text=(),font=Font)
 en1  = Entry(Caixa, font=Font)
 en2 = Entry(Caixa, font=Font)
