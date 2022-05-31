@@ -4,16 +4,17 @@ from tkinter import *
 
 #________________________________________________________________
 Jan = Tk()
-Jan.grid_rowconfigure(4, weight=3)
-Jan.grid_columnconfigure(4, weight=1)
-Jan.grid_rowconfigure(3, weight=3)
-Jan.grid_columnconfigure(3, weight=1)
-Jan.grid_rowconfigure(2, weight=3)
-Jan.grid_columnconfigure(2, weight=1)
-Jan.grid_rowconfigure(1, weight=3)
-Jan.grid_columnconfigure(1, weight=1)
+Jan.grid_rowconfigure(1, weight=1)
+Jan.grid_rowconfigure(2, weight=1)
+Jan.grid_rowconfigure(3, weight=1)
+Jan.grid_rowconfigure(4, weight=1)
 Jan.grid_columnconfigure(0, weight=1)
-Jan.grid_rowconfigure(0, weight=3)
+
+Jan.grid_columnconfigure(1, weight=1)
+
+Jan.grid_columnconfigure(2, weight=1)
+
+
 SENAC = 'Calibri 50'
 
 SenP = Button(Jan, text='+', font=SENAC, foreground='green', background='black')
@@ -44,4 +45,5 @@ Sen6.grid(row=3,column=2, sticky= NSEW)
 Sen7.grid(row=4,column=0, sticky= NSEW)
 Sen8.grid(row=4,column=1, sticky= NSEW)
 Sen9.grid(row=4,column=2, sticky= NSEW)
+
 Jan.mainloop()

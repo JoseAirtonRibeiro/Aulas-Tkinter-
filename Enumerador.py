@@ -1,6 +1,4 @@
-from itertools import count
 from tkinter import *
-from turtle import position
 #_______________________________________________________________________________________________
 nume=1
 def Less():
@@ -41,6 +39,5 @@ Nu2.grid(row=0, column=0, sticky= NSEW)
 Nu3.grid(row=1, column=1, sticky= NSEW) 
 
 
-Nu_.bind('+', lambda event: Plus())
-Nu2.bind('_', lambda event: Less())
+
 Regulador.mainloop()
