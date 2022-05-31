@@ -1,11 +1,12 @@
 from itertools import count
 from tkinter import *
 #_______________________________________________________________________________________________
+nume=1
 def Less():
-    Janelinha['text'] = int(Janelinha['text']) - 1
+    Janelinha['text'] = int(Janelinha['text']) - nume
 
 def Plus():
-    Janelinha['text'] = int(Janelinha['text']) + 1
+    Janelinha['text'] = int(Janelinha['text']) + nume
 #_______________________________________________________________________________________________
 Regulador = Tk()
 Regulador.geometry('500x200')
