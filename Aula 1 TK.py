@@ -2,7 +2,7 @@ from tkinter import *
 
 SENAC = Tk()
 def Impressao():
-    Nome['text'] = Botao.get()
+    Nome['text'] = (Caxinha.get())
 #--------------------------------------------------------------------
 #Front-End
 Nome = Label(SENAC, text='Flamengo!',font='Calibri 20 ')
