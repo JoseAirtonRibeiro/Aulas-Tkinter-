@@ -36,9 +36,6 @@ Janelinha.grid(row=0, column=1, sticky= NSEW)
 
 Nu_.grid(row=0, column=2, sticky= NSEW)
 Nu2.grid(row=0, column=0, sticky= NSEW)
-Nu3.grid(row=1, column=1, sticky= NSEW) 
-Nu2.bind('-', lambda event: Less())
-Nu_.bind('+', lambda event: Less())
-
+Nu3.grid(row=1, column=1, sticky= NSEW)
 
 Regulador.mainloop()
