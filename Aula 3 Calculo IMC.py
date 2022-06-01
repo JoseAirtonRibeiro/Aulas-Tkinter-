@@ -9,6 +9,7 @@ def IMC():
 #___________________________________________________________________________________
 #Front-end
 SENAC = Tk()
+SENAC.bind('<Return>',lambda event:IMC())
 FN = 'Verdana 20 bold'
 Label_= Label(SENAC, text=0.0, font=FN) 
 Label2= Label(SENAC, text='Altura:', font=FN) 
