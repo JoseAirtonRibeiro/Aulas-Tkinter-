@@ -6,9 +6,21 @@ def Num(Vl):
     pass
 
 def NumOp():
-  Res= eval(Scr['text'])
-  Scr['text'] = str(Res)
+  controle= 0  
+  entra = Scr['text']
+  entraM = entra.replace('+', '_').replace('*', '_').replace('/', '_').replace('-', '_')
+  entraM2 = entraM.split('_')
+  for i in range(len(entraM2)):
+     print(entraM2[i].replace('.', '1', 1).isnumeric())
+     if not entraM2[i].replace('.','1',1).isnumeric():
+         controle = 1
+         break
 
+  if controle == 0:
+      Res= eval(Scr['text'])
+      Scr['text'] = str(Res)
+  else:
+      Scr['text'] = 'Valor Invalido'
 
 def Clean():
     Scr['text']= ''
@@ -17,6 +29,7 @@ def Del():
     
     Scr['text'] -= ''
     pass
+
 #___________________________________________________________________________________
 fn= 'verdana 30 bold'
 SENAC = Tk()
@@ -49,7 +62,6 @@ SENAC.grid_columnconfigure(1, weight=1)
 SENAC.grid_columnconfigure(2, weight=1)
 SENAC.grid_columnconfigure(3, weight=1)
 SENAC.grid_columnconfigure(4, weight=1)
-SENAC.grid_rowconfigure(0, weight=1)
 SENAC.grid_rowconfigure(1, weight=1)
 SENAC.grid_rowconfigure(2, weight=1)
 SENAC.grid_rowconfigure(3, weight=1)
@@ -58,7 +70,7 @@ SENAC.grid_rowconfigure(4, weight=1)
 
 
 #___________________________________________________________________________________
-Scr.grid(row=0, column=1, sticky=NSEW, columnspan=4)
+Scr.grid(row=0, column=0, sticky=NSEW, columnspan=5)
 Sum.grid(row=4, column=0, sticky=NSEW)
 Div.grid(row=4, column=1, sticky=NSEW)
 Mul.grid(row=4, column=2, sticky=NSEW)
@@ -94,7 +106,5 @@ SENAC.bind('+',lambda event:Num('+'))
 SENAC.bind('-',lambda event:Num('-'))
 SENAC.bind('.',lambda event:Num('.'))
 SENAC.bind('<Return>',lambda event:NumOp())
-SENAC.bind('<Backspace>',lambda event:Del())
-
 SENAC.mainloop()
 #___________________________________________________________________________________
